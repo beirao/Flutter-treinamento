@@ -5,12 +5,7 @@ export default function Home() {
   return (
     <div className="min-h-screen mt-10">
       <div className="grid place-items-center">
-        <div
-          className="grid grid-cols-1 gap-7 place-items-center  text-slate-700 "
-          style={{
-            width: "760px",
-          }}
-        >
+        <div className="grid grid-cols-1 gap-7 place-items-center  text-slate-700 mx-2 max-w-3xl">
           <p className="font-semibold text-2xl text-slate-800">
             Os básicos de Dart
           </p>
@@ -27,11 +22,9 @@ export default function Home() {
 
           <Topic
             title={"Variáveis"}
-            text={`Mesmo no código Dart de tipo seguro, a maioria das variáveis não
-            precisa de tipos explícitos, graças à inferência de tipos.
-            Usar "var" permite que a variável seja
-            modificada posteriormente. Se a variável não precisa de ser
-            modificada usa "final".`}
+            text={
+              "Mesmo no código Dart de tipo seguro, a maioria das variáveis não precisa de tipos explícitos, graças à inferência de tipos. Usar 'var' permite que a variável seja modificada posteriormente. Se a variável não precisa de sermodificada usa 'final'."
+            }
             code={`var name = 'Voyager I';
 var year = 1977;
 final antennaDiameter = 3.7;
@@ -44,8 +37,7 @@ var image = {
 
           <Topic
             title={"Comente"}
-            text={`Usa // ou /* */ para comentar. 
-            para comentar. `}
+            text={"Usa // ou /* */ para comentar."}
             code={`// This is a normal, one-line comment.
 
 /// This is a documentation comment, used to document libraries,
