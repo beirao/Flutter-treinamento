@@ -5,10 +5,10 @@ export default function Home() {
     <div className="min-h-screen mt-10">
       <div className="grid place-items-center">
         <div
-          className="grid grid-cols-1 gap-7 place-items-center  text-slate-700 "
-          style={{
-            width: "760px",
-          }}
+          className="grid grid-cols-1 gap-7 place-items-center  text-slate-700 mx-10 max-w-3xl"
+          // style={{
+          //   width: "760px",
+          // }}
         >
           <p className="font-semibold text-2xl text-black">O que é Flutter?</p>
 

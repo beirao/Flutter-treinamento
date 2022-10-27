@@ -34,7 +34,11 @@ export default function Topic({ title, text, code, videoLink }) {
           height="500"
           src={videoLink}
           frameborder="0"
-          allowfullscreen
+          allowfullscreen="allowfullscreen"
+          mozallowfullscreen="mozallowfullscreen"
+          msallowfullscreen="msallowfullscreen"
+          oallowfullscreen="oallowfullscreen"
+          webkitallowfullscreen="webkitallowfullscreen"
         ></iframe>
       ) : (
         ""

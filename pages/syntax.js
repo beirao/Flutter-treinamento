@@ -109,9 +109,109 @@ for (int month = 1; month <= 12; month++) {
 var result = fibonacci(20);`}
           />
 
-          <Topic title={"tille"} text={"text"} code={`code`} />
-          <Topic title={"tille"} text={"text"} code={`code`} />
-          <Topic title={"tille"} text={"text"} code={`code`} />
+          <Topic
+            title={"Enums"}
+            text={
+              "Enums são uma maneira de enumerar um conjunto predefinido de valores ou instâncias de uma maneira que garante que não haja outras instâncias desse tipo."
+            }
+            code={`enum PlanetType { terrestrial, gas, ice }`}
+          />
+          <Topic
+            title={"Classes"}
+            text={
+              "Aqui está um exemplo de uma classe com três propriedades, dois construtores e um método."
+            }
+            code={`class Spacecraft {
+  String name;
+  DateTime? launchDate;
+
+  // Read-only non-final property
+  int? get launchYear => launchDate?.year;
+
+  // Constructor, with syntactic sugar for assignment to members.
+  Spacecraft(this.name, this.launchDate) {
+    // Initialization code goes here.
+  }
+
+  // Method.
+  void describe() {
+    print('Spacecraft: $name');
+    // Type promotion doesn't work on getters.
+    var launchDate = this.launchDate;
+    if (launchDate != null) {
+      int years = DateTime.now().difference(launchDate).inDays ~/ 365;
+      print('Launched: $launchYear ($years years ago)');
+    } else {
+      print('Unlaunched');
+    }
+  }
+}`}
+          />
+          <Topic
+            title={"Chamada de classe"}
+            text={"Definição de classes com parâmetros e chamade."}
+            code={`var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+voyager.describe();`}
+          />
+
+          <Topic
+            title={"Herança"}
+            text={"Classes podem ser herdadas"}
+            code={`class Orbiter extends Spacecraft {
+  double altitude;
+
+  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+}`}
+          />
+
+          <Topic
+            title={"Interfaces e abstract classes"}
+            text={
+              "Você pode criar uma classe abstrata para ser estendida (ou implementada) por uma classe concreta. Classes abstratas podem conter métodos abstratos (com corpos vazios)."
+            }
+            code={`abstract class Describable {
+  void describe();
+
+  void describeWithEmphasis() {
+    print('=========');
+    describe();
+    print('=========');
+  }
+}`}
+          />
+          <Topic
+            title={"Implements"}
+            text={
+              "Dart não tem palavra-chave de interface. Em vez disso, todas as classes definem implicitamente uma interface. Você pode implementar qualquer classe."
+            }
+            code={`class MockSpaceship implements Spacecraft {
+  // ···
+}`}
+          />
+          <Topic
+            title={"Usar uma exceção"}
+            text={"Para gerar uma exceção, use throw:"}
+            code={`if (astronauts == 0) {
+  throw StateError('No astronauts.');
+}`}
+          />
+
+          <Topic
+            title={"Criar exceção"}
+            text={
+              "Para capturar uma exceção, use uma instrução try com on ou catch:"
+            }
+            code={`try {
+  for (final object in flybyObjects) {
+    var description = await File('$object.txt').readAsString();
+    print(description);
+  }
+} on IOException catch (e) {
+  print('Could not describe object: $e');
+} finally {
+  flybyObjects.clear();
+}`}
+          />
 
           <p>
             <br />

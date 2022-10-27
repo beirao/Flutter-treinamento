@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+⚡ Redirection : http://pitmed.beirao.me
+
+⚡ HTTPS : https://green-sun-4863.on.fleek.co/
+
+⚡ IPFS : ipfs://bafybeigxlx3ixrfjgskt5euubfgpby32hfdz3dy5leu3n7obflt7tyemxy/
 
 ## Getting Started
 
