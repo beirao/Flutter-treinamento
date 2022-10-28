@@ -1,6 +1,9 @@
 .container {
   padding: 0 2rem;
 }
+.ex1 {
+  max-width: 750px;
+}
 
 .main {
   min-height: 100vh;
