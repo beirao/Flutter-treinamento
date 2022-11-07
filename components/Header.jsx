@@ -27,32 +27,30 @@ export default function Header() {
         </div>
         <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div class="text-sm lg:flex-grow"></div>
-          <div>
-            <Link
-              href="/"
-              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
-            >
-              Porque Flutter ?
-            </Link>
-            <Link
-              href="/setup"
-              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
-            >
-              Instalação
-            </Link>
-            <Link
-              href="/syntax"
-              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
-            >
-              Sintaxe
-            </Link>
-            <Link
-              href="/tuto"
-              class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
-            >
-              Tuto
-            </Link>
-          </div>
+          <Link
+            href="/"
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
+          >
+            Porque Flutter ?
+          </Link>
+          <Link
+            href="/setup"
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
+          >
+            Instalação
+          </Link>
+          <Link
+            href="/syntax"
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
+          >
+            Sintaxe
+          </Link>
+          <Link
+            href="/tuto"
+            class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 rounded hover:bg-gray-100 mr-8"
+          >
+            Tuto
+          </Link>
         </div>
       </nav>
       <hr />
