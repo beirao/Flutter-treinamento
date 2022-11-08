@@ -83,7 +83,7 @@ export default function Home() {
           />
           <div className="flex flex-col max-w-3xl items-center">
             <Link href="/tuto">
-              <button className="mt-7 bg-red-800 hover:bg-red-300 p-6 rounded-2xl text-white text-2xl">
+              <button className="mt-7 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 p-4 rounded-2xl text-white text-xl">
                 🥰 🎉🎉 COMEÇAR A CODIFICAR !!!!!! 🎉🎉 🥰
               </button>
             </Link>
