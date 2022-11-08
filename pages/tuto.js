@@ -220,7 +220,255 @@ class HomePage extends StatelessWidget{
 }`}
           />
 
-          <Topic title={"test"} text={"test"} videoLink={""} code={`test`} />
+          <Topic
+            title={"Widget - Parte 1"}
+            videoLink={"https://www.youtube.com/embed/lFl_Khbo4cc"}
+            code={`class LearnFlutterPage extends StatefulWidget{
+  const LearnFlutterPage({Key? key}) : super(key: key);
+
+  @override 
+  State<LearnFlutterPage> createState() => _LearnFlutterPageState();
+}
+
+
+class _LearnFlutterPageState extends State<LearnFlutterPage>{
+  @override 
+  Widget build(BuildContext context){
+    return Container();
+  }
+}`}
+          />
+          <Topic
+            code={`import 'package:flutter/material.dart';
+
+class LearnFlutterPage extends StatefulWidget {
+  const LearnFlutterPage({Key? key}) : super(key: key);
+
+  @override
+  State<LearnFlutterPage> createState() => _LearnFlutterPageState();
+}
+
+class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Flutter'),
+      ),
+      body: Column(
+        children: [
+          Image.asset('images/Sua_Imagem.jpg')
+        ],
+      ),
+    );
+  }
+}`}
+          />
+          <Topic
+            title={"Widget - Parte 2"}
+            videoLink={"https://www.youtube.com/embed/fAHHbkZE4U8"}
+            code={`import 'package:flutter/material.dart';
+
+class LearnFlutterPage extends StatefulWidget {
+  const LearnFlutterPage({Key? key}) : super(key: key);
+
+  @override
+  State<LearnFlutterPage> createState() => _LearnFlutterPageState();
+}
+
+class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Flutter'),
+      ),
+      body: Column(
+        children: [
+          Image.asset('images/Inatel.jpg.webp'),
+          const SizedBox(height: 10,),
+          const Divider(color: Colors.black,),
+          Container(
+            margin : const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
+            width: double.infinity,
+            color : Colors.blueGrey,
+            child: const Center(
+              child: Text(
+                'This is a text Widget',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}`}
+          />
+          <Topic
+            title={"Widget - Parte 3"}
+            text={"test"}
+            videoLink={"https://www.youtube.com/embed/kqIoAzhuJ-w"}
+            code={`import 'package:flutter/material.dart';
+
+class LearnFlutterPage extends StatefulWidget {
+  const LearnFlutterPage({Key? key}) : super(key: key);
+
+  @override
+  State<LearnFlutterPage> createState() => _LearnFlutterPageState();
+}
+
+class _LearnFlutterPageState extends State<LearnFlutterPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Learn Flutter'),
+      ),
+      body: Column(
+        children: [
+          Image.asset('images/Inatel.jpg.webp'),
+          const SizedBox(height: 10,),
+          const Divider(color: Colors.black,),
+          Container(
+            margin : const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
+            width: double.infinity,
+            color : Colors.blueGrey,
+            child: const Center(
+              child: Text(
+                'This is a text Widget',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                ),
+              ),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: (){
+              debugPrint('ElevatedButton');
+            },
+            child: const Text('Elevated Button'),
+          ),
+
+          OutlinedButton(
+            onPressed: (){
+              debugPrint('OutlinedButton');
+            },
+            child: const Text('Outlined Button'),
+          ),
+
+          TextButton(
+            onPressed: (){
+              debugPrint('TextButton');
+            },
+            child: const Text('Text Button'),
+          ),
+
+          GestureDetector(
+            onTap: (){
+              debugPrint('This is the row');
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const[
+                Icon(
+                  Icons.smartphone,
+                  color: Colors.blue,
+                ),
+                Text('Row Widget'),
+                Icon(
+                  Icons.laptop,
+                  color: Colors.blue,
+                )
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}`}
+          />
+          <Topic
+            title={"Nova página através do botão de menu"}
+            videoLink={"https://www.youtube.com/embed/mmktqar1Vxc"}
+            code={`import 'package:flutter/material.dart';
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}`}
+          />
+          <Topic
+            code={`import 'package:flutter/material.dart';
+import 'package:flutter_application/home_page.dart';
+
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: RootPage(),
+    );
+  }
+}
+
+class RootPage extends StatefulWidget {
+  const RootPage({Key? key}) : super(key: key);
+
+  @override
+  State<RootPage> createState() => _RootPageState();
+}
+
+class _RootPageState extends State<RootPage> {
+  int currentPage = 0;
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('My First App')),
+      body: const HomePage(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          debugPrint('Button pressed');
+        },
+        child: const Icon(Icons.add),
+      ),
+      bottomNavigationBar: NavigationBar(
+        destinations: const[
+          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+        ],
+        onDestinationSelected: (int index){
+          setState((){
+            currentPage = index;
+          });
+        },
+        selectedIndex: currentPage,
+      ),
+    );
+  }
+}`}
+          />
+          {/* <Topic title={"test"} text={"test"} videoLink={""} code={`test`} /> */}
+
           <p>
             <br />
             <br />

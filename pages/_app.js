@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "../styles/nprogress.css";
 
 import Header from "../components/Header";
+import Header2 from "../components/Header2";
 import Head from "next/head";
 import Footer from "../components/Footer";
 
@@ -24,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         />
         <link rel="icon" href="/logo_page.png" />
       </Head>
-      <Header />
+      <Header2 />
       <Component {...pageProps} />
       {/* <Footer /> */}
     </div>

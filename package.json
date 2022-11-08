@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
     "copy-to-clipboard": "^3.3.2",
+    "heroicons": "^2.0.13",
     "next": "13.0.0",
     "nprogress": "^0.2.0",
     "react": "18.2.0",
