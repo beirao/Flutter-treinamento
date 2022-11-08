@@ -15,7 +15,7 @@ export default function Topic({
   const [btnCopyFocus, setBtnCopyFocus] = useState(false);
 
   return (
-    <div className="flex flex-col max-w-3xl">
+    <div className="flex flex-col max-w-4xl">
       {title ? (
         <p className="font-semibold indent-8 my-3 text-xl text-slate-700">
           {title}
@@ -30,6 +30,7 @@ export default function Topic({
             className="text-blue-600 hover:text-blue-500 underline"
             href={link}
             target="_blank"
+            rel="noreferrer"
           >
             {linkName}
           </a>
@@ -41,12 +42,12 @@ export default function Topic({
       <div className="items-center justify-center">
         {videoLink ? (
           <iframe
-            className="mt-4 mx-auto"
+            className="my-4 mx-auto"
             width="80%"
             height="400px"
             src={videoLink}
-            frameborder="0"
-            allowfullscreen="allowfullscreen"
+            frameBorder="0"
+            allowFullScreen="allowfullscreen"
             mozallowfullscreen="mozallowfullscreen"
             msallowfullscreen="msallowfullscreen"
             oallowfullscreen="oallowfullscreen"
@@ -58,11 +59,11 @@ export default function Topic({
       </div>
       {code ? (
         <div>
-          <div className="relative">
+          <div className="relative mt-2">
             <button
               onFocus={() => setBtnCopyFocus(true)}
               onBlur={() => setBtnCopyFocus(false)}
-              className="absolute top-0 right-0 p-2 mr-4 mt-4 text-sm hover:bg-slate-500 focus:bg-cyan-500 bg-slate-400 rounded-bl-xl text-white "
+              className="absolute top-0 right-0 opacity-50 p-2 text-sm hover:bg-cyan-400 focus:bg-sky-500 bg-slate-400 rounded-bl-xl text-white "
               onClick={() => {
                 navigator.clipboard.writeText(code);
               }}
@@ -70,11 +71,7 @@ export default function Topic({
               {btnCopyFocus ? "Copied" : "Copy"}
             </button>
           </div>
-          <SyntaxHighlighter
-            language="Javascript"
-            style={docco}
-            className="m-4"
-          >
+          <SyntaxHighlighter language="Javascript" style={docco} className="">
             {code}
           </SyntaxHighlighter>
         </div>

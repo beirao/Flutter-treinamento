@@ -151,18 +151,6 @@ class _RootPageState extends State<RootPage> {
           />
 
           <Topic
-            code={`import 'package:flutter/material.dart';
-
-class HomePage extends StatelessWidget{
-  const HomePage({Key? key}) : super(key: key);
-
-  @override 
-  Widget build(BuildContext context){
-    return Container();
-  }
-}`}
-          />
-          <Topic
             title={"Criar páginas e adicionar imagens"}
             videoLink={"https://www.youtube.com/embed/IKbPDQnzeiU"}
             code={`import 'package:flutter/material.dart';
@@ -216,6 +204,18 @@ class _RootPageState extends State<RootPage> {
         selectedIndex: currentPage,
       ),
     );
+  }
+}`}
+          />
+          <Topic
+            code={`import 'package:flutter/material.dart';
+
+class HomePage extends StatelessWidget{
+  const HomePage({Key? key}) : super(key: key);
+
+  @override 
+  Widget build(BuildContext context){
+    return Container();
   }
 }`}
           />
