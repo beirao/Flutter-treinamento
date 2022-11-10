@@ -1,8 +1,4 @@
-⚡ Redirection : http://pitmed.beirao.me
-
-⚡ HTTPS : https://green-sun-4863.on.fleek.co/
-
-⚡ IPFS : ipfs://bafybeigxlx3ixrfjgskt5euubfgpby32hfdz3dy5leu3n7obflt7tyemxy/
+⚡ Live : http://flutter.beirao.me
 
 ## Getting Started
 
