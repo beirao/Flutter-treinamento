@@ -1,6 +1,6 @@
 const nextConfig = {
   images: {
-    domains: ["www.youtube.com"],
+    domains: ["www.youtube.com", "avatars.githubusercontent.com"],
   },
 };
 
