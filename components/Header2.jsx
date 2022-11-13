@@ -46,7 +46,7 @@ export default function Header2() {
                       width="50"
                       height="50"
                     />
-                    <span className="self-center text-xl font-semibold whitespace-nowrap text-slate-200">
+                    <span className="self-center text-xl sm:text-lg font-semibold whitespace-nowrap text-slate-200">
                       Treinamento Flutter
                     </span>
                   </div>
@@ -75,7 +75,7 @@ export default function Header2() {
                     <Link
                       href="/api/auth/signin"
                       className={classNames(
-                        "text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        "text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium -mr-3"
                       )}
                       onClick={(e) => {
                         e.preventDefault();
