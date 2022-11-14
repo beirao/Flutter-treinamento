@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mr-100 {
+  margin-right: 46rem /* 384px */;
+}

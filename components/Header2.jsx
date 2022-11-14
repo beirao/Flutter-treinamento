@@ -10,7 +10,8 @@ const navigation = [
   { name: "Porque Flutter ?", href: "/", current: false },
   { name: "Instalação", href: "/setup", current: false },
   { name: "Sintaxe", href: "/syntax", current: false },
-  { name: "Tuto", href: "/tuto", current: false },
+  { name: "Iniciar", href: "/tuto", current: false },
+  { name: "Blog", href: "/blog", current: false },
 ];
 
 function classNames(...classes) {
@@ -25,9 +26,9 @@ export default function Header2() {
       <Disclosure as="nav" className="bg-gray-800">
         {({ open }) => (
           <>
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-6xl px-2 lg:px-6">
               <div className="relative flex h-16 items-center justify-between">
-                <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                   {/* Mobile menu button*/}
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
@@ -38,7 +39,7 @@ export default function Header2() {
                     )}
                   </Disclosure.Button>
                 </div>
-                <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
                   <div className="flex flex-shrink-0 items-center">
                     <Image
                       src="/logo_page.png"
@@ -46,11 +47,11 @@ export default function Header2() {
                       width="50"
                       height="50"
                     />
-                    <span className="self-center text-xl sm:text-lg font-semibold whitespace-nowrap text-slate-200">
+                    <span className="self-center text-xl lg:text-lg font-semibold whitespace-nowrap text-slate-200">
                       Treinamento Flutter
                     </span>
                   </div>
-                  <div className="hidden sm:ml-6 sm:block">
+                  <div className="hidden lg:ml-6 lg:block">
                     <div className="flex space-x-4">
                       {navigation.map((item) => (
                         <Link
@@ -70,21 +71,8 @@ export default function Header2() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {status == "unauthenticated" ? (
-                    <Link
-                      href="/api/auth/signin"
-                      className={classNames(
-                        "text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium -mr-3"
-                      )}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        signIn("github");
-                      }}
-                    >
-                      Sign in
-                    </Link>
-                  ) : (
+                <div className="absolute inset-y-0 right-0 flex items-center pr-2 lg:static lg:inset-auto lg:ml-6 lg:pr-0">
+                  {status == "authenticated" ? (
                     <Menu as="div" className="relative ml-3">
                       <div>
                         <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -132,12 +120,25 @@ export default function Header2() {
                         </Menu.Items>
                       </Transition>
                     </Menu>
+                  ) : (
+                    <Link
+                      href="/api/auth/signin"
+                      className={classNames(
+                        "text-gray-200 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium -mr-3"
+                      )}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        signIn("github");
+                      }}
+                    >
+                      Sign in
+                    </Link>
                   )}
                 </div>
               </div>
             </div>
 
-            <Disclosure.Panel className="sm:hidden">
+            <Disclosure.Panel className="lg:hidden">
               <div className="space-y-1 px-2 pt-2 pb-3">
                 {navigation.map((item) => (
                   <Disclosure.Button
