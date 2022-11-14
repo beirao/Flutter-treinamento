@@ -14,7 +14,7 @@ export default function blog({ topics }) {
   return (
     <div className="min-h-screen mt-2">
       <div className="grid place-items-center">
-        <div className="grid grid-cols-1 gap-7 place-items-left text-slate-700 max-w-3xl mx-5">
+        <div className="grid grid-cols-1 gap-7 place-items-left text-slate-700 max-w-3xl ">
           <p className="text-sm mr-100"> </p>
 
           <div className="flex flex-row mx-1 justify-between">
@@ -59,7 +59,7 @@ export default function blog({ topics }) {
           {topics.map((topic, index) => {
             const { _id, author, title, text } = topic;
             return (
-              <div key={_id.toString()}>
+              <div className="mx-5" key={_id.toString()}>
                 <CompactTopic author={author} title={title} text={text} />
               </div>
             );
