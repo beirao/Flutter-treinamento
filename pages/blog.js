@@ -62,8 +62,8 @@ export default function blog({ topics }) {
           {topics.map((topic, index) => {
             const { _id, author, title, text } = topic;
             return (
-              <Link href={`/topic/${_id.toString()}`}>
-                <div className="mx-5" key={_id.toString()}>
+              <Link href={`/topic/${_id.toString()}`} key={_id.toString()}>
+                <div className="mx-5">
                   <CompactTopic author={author} title={title} text={text} />
                 </div>
               </Link>
