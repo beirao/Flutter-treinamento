@@ -128,7 +128,7 @@ export default function Header2() {
                       )}
                       onClick={(e) => {
                         e.preventDefault();
-                        signIn("github");
+                        signIn();
                       }}
                     >
                       Sign in

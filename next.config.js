@@ -5,7 +5,11 @@ const nextConfig = {
   //   outputStandalone: true,
   // },
   images: {
-    domains: ["www.youtube.com", "avatars.githubusercontent.com"],
+    domains: [
+      "www.youtube.com",
+      "avatars.githubusercontent.com",
+      "lh3.googleusercontent.com",
+    ],
   },
 };
 
