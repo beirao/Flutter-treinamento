@@ -10,6 +10,7 @@ import NProgress from "nprogress"; //nprogress module
 import "nprogress/nprogress.css"; //styles of nprogress
 
 import { SessionProvider } from "next-auth/react";
+import { NotificationProvider } from "@web3uikit/core";
 
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
@@ -23,6 +24,10 @@ export default function App({
     <SessionProvider session={session}>
       <div className="bg-white">
         <Head>
+          <meta
+            name="google-site-verification"
+            content="ln77rkIO1vwuzitFeT5z-SjpJs8hOGREi-y51VN2S5c"
+          />
           <title>Flutter tuto</title>
           <meta
             name="Flutter tuto"
@@ -30,11 +35,11 @@ export default function App({
           />
           <link rel="icon" href="/logo_page.png" />
         </Head>
-        <Header2 />
-        <Component {...pageProps} />
-        {/* {console.log("Signed in as", session.user.email)} */}
-
-        {/* <Footer /> */}
+        <NotificationProvider>
+          <Header2 />
+          <Component {...pageProps} />
+          {/* <Footer /> */}
+        </NotificationProvider>
       </div>
     </SessionProvider>
   );

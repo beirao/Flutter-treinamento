@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 
 export default function Topic({
   title,
+  author,
   text,
   code,
   link,
@@ -17,7 +18,7 @@ export default function Topic({
   return (
     <div className="flex flex-col max-w-4xl">
       {title ? (
-        <p className="font-semibold indent-8 my-3 text-xl text-slate-700">
+        <p className="font-semibold indent-8 my-3 text-2xl text-slate-700">
           {title}
         </p>
       ) : (

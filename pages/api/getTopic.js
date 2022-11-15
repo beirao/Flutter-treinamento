@@ -1,11 +1,15 @@
 import clientPromise from "../../lib/mongodb";
+import { ObjectId } from "mongodb";
 
 export default async (req, res) => {
   try {
     const client = await clientPromise;
     const db = client.db("flutter");
 
-    const topics = await db.collection("topics").find({ show: 1 }).toArray();
+    const { topicId } = req.query;
+    console.log(topicId);
+
+    const topics = await db.collection("topics").findOne(ObjectId(topicId));
 
     res.status(200).json(topics);
   } catch (e) {

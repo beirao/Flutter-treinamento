@@ -3,23 +3,28 @@ import { getSession } from "next-auth/react";
 
 export default async (req, res) => {
   const session = await getSession({ req });
-  const { title, text, code, link, linkName, videoLink } = req.query;
 
   if (session) {
     try {
-      const client = await clientPromise;
-      const db = client.db("flutter");
+      if (req.method === "POST") {
+        const client = await clientPromise;
+        const db = client.db("flutter");
 
-      await db.collection("topics").insertOne({
-        id: session.user.email,
-        author: session.user.name,
-        title: title,
-        text: text,
-        code: code,
-        link: link,
-        linkName: linkName,
-        videoLink: videoLink,
-      });
+        const data = req.body;
+        console.log("dataaaa : ", data);
+
+        await db.collection("topics").insertOne({
+          userId: session.user.email,
+          author: session.user.name,
+          show: 1,
+          title: data.title,
+          code: data.code,
+          videoLink: data.videoLink,
+          text: data.text,
+          link: "",
+          linkName: "",
+        });
+      }
     } catch (e) {
       res.status(401).json({ error: "Error during the query" });
     }
@@ -27,4 +32,3 @@ export default async (req, res) => {
     res.status(401).json({ error: "Unauthenticated user" });
   }
 };
-// http://localhost:3000/api/posttopic?title=oui
