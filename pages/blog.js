@@ -2,6 +2,7 @@ import { useSession } from "next-auth/react";
 import CompactTopic from "../components/CompactTopic";
 import { Button, Input } from "@web3uikit/core";
 import Link from "next/link";
+import { useState } from "react";
 
 export const getServerSideProps = async () => {
   const req = await fetch(process.env.HOST + "/api/getAllTopics");
@@ -11,6 +12,13 @@ export const getServerSideProps = async () => {
 
 export default function blog({ topics }) {
   const { data: session, status } = useSession();
+  const [stateTopic, setStateTopic] = useState(topics);
+  const [searchValue, setSearchValue] = useState(topics);
+
+  const fsearch = async () => {
+    const response = await fetch("/api/searchTopics?search=" + searchValue);
+    setStateTopic(response);
+  };
 
   return (
     <div className="min-h-screen mt-2">
@@ -26,7 +34,9 @@ export default function blog({ topics }) {
                 name="Buscar"
                 width="120px"
                 onBlur={function noRefCheck() {}}
-                onChange={function noRefCheck() {}}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                }}
               />
               <div className="ml-2 mt-1">
                 <Button
