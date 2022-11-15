@@ -1,5 +1,5 @@
 import { Button, Input } from "@web3uikit/core";
-import { authOptions } from "/home/toma/Documents/pidmed/frontend/pages/api/auth/[...nextauth].js";
+import { authOptions } from "../api/auth/[...nextauth].js";
 import { unstable_getServerSession } from "next-auth/next";
 import { useState } from "react";
 import { useNotification } from "@web3uikit/core";
