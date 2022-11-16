@@ -32,15 +32,6 @@ export const getServerSideProps = async (context) => {
 };
 
 export default function blog({ session, topics }) {
-  function handleNewNotification(title) {
-    dispatch({
-      type: "success",
-      message: title,
-      title: "Tópico enviado",
-      position: "topR",
-    });
-  }
-
   return (
     <div className="min-h-screen mt-2">
       <div className="grid place-items-center">

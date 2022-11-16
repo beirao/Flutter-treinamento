@@ -11,11 +11,12 @@ export default async (req, res) => {
         const db = client.db("flutter");
 
         const data = req.body;
-        console.log("dataaaa : ", data);
+        const now = new Date();
 
         await db.collection("topics").insertOne({
           userId: session.user.email,
           author: session.user.name,
+          date: `${now.getDate()}/${now.getMonth()}/${now.getFullYear()}`,
           show: 1,
           title: data.title,
           code: data.code,

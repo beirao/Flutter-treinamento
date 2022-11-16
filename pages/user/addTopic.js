@@ -60,8 +60,7 @@ export default function addTopic({ topics }) {
       },
     });
     // const data = await response.json();
-
-    console.log("data :", response);
+    // console.log("data :", response);
   };
 
   return (

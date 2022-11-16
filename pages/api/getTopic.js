@@ -1,5 +1,6 @@
 import clientPromise from "../../lib/mongodb";
 import { ObjectId } from "mongodb";
+import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export default async (req, res) => {
   try {
@@ -7,9 +8,11 @@ export default async (req, res) => {
     const db = client.db("flutter");
 
     const { topicId } = req.query;
-    const topics = await db.collection("topics").findOne(ObjectId(topicId));
+    const topic = await db
+      .collection("topics")
+      .findOne({ _id: ObjectId(topicId), show: 1 });
 
-    res.status(200).json(topics);
+    res.status(200).json(topic);
   } catch (e) {
     res.status(401).json({ error: "Error during the query" });
   }
