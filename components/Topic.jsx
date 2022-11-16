@@ -6,6 +6,7 @@ import { useState, useRef } from "react";
 export default function Topic({
   title,
   author,
+  userId,
   text,
   code,
   link,
@@ -24,6 +25,9 @@ export default function Topic({
       ) : (
         ""
       )}
+      {author ? <p className="indent-8 text-slate-700">{author}</p> : ""}
+      <hr className="my-4" />
+
       <p className="indent-4">
         {text ? text : ""}{" "}
         {link && linkName ? (

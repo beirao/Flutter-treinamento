@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 
 import Router from "next/router";
 import NProgress from "nprogress"; //nprogress module
-import "nprogress/nprogress.css"; //styles of nprogress
+import "../styles/nprogress.css"; //styles of nprogress
 
 import { SessionProvider } from "next-auth/react";
 import { NotificationProvider } from "@web3uikit/core";

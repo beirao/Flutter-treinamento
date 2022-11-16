@@ -17,16 +17,19 @@ function TopicDetail({ topic }) {
   const topicId = router.query.topicId;
 
   return (
-    <div className="min-h-screen mt-10">
+    <div className="min-h-screen ">
       <div className="grid place-items-center">
         <div className="grid grid-cols-1 gap-7 place-items-left text-slate-700 max-w-3xl mx-5">
-          {" "}
+          <p className="text-2xl mr-100"></p>{" "}
           <Topic
             title={topic.title}
+            author={topic.author}
             text={topic.text}
             videoLink={topic.videoLink}
             code={topic.code}
           />
+          <br />
+          <br />
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 /* I made these changes in nprogress.css */
 #nprogress .bar {
-  background: blue;
+  background: #76c5d6;
   position: fixed;
   z-index: 1031;
   top: 0;
@@ -8,9 +8,14 @@
 
   width: 100%;
   height: 4px;
+  box-shadow: 3px 6px 50px #76c5d6;
 }
 #nprogress .spinner-icon {
   width: 25px;
   height: 25px;
   border: solid 3px transparent;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #ffbb00, 0 0 5px #ffbb00;
 }

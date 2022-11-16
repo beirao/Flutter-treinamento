@@ -1,7 +1,13 @@
 import Image from "next/image";
 import { useState, useRef } from "react";
 
-export default function CompactTopic({ title, text, imagePath, author }) {
+export default function CompactTopic({
+  userId,
+  title,
+  text,
+  imagePath,
+  author,
+}) {
   return (
     <div className="flex flex-col rounded-lg bg-slate-50 p-2 hover:bg-slate-100">
       <div className="flex flex-col justify-between mb-2">
