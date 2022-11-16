@@ -55,6 +55,7 @@ export default function blog({ session, topics }) {
               <Link href={`/topic/${_id.toString()}`} key={_id.toString()}>
                 <div className="mx-5">
                   <CompactTopic
+                    _id={_id}
                     userId={userId}
                     author={author}
                     title={title}

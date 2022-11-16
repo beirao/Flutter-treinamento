@@ -23,6 +23,7 @@ function TopicDetail({ topic }) {
           <p className="text-2xl mr-100"></p>{" "}
           <Topic
             title={topic.title}
+            userId={topic.userId}
             author={topic.author}
             text={topic.text}
             videoLink={topic.videoLink}
