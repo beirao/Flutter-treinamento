@@ -10,26 +10,26 @@ export default function Home() {
             text={
               "Neste vídeo veremos como criar um projeto Flutter a partir do Visual Studio Code."
             }
-            videoLink={"https://www.youtube.com/embed/_IkbqSCIyYk"}
+            videoLink={"https://www.youtube.com/embed/QD9N9AtxbDg"}
           />
           <Topic
             title={"Configuração do Android Studio"}
             text={
               "Neste segundo vídeo veremos como configurar um emulador android para nosso projeto Flutter."
             }
-            videoLink={"https://www.youtube.com/embed/CEf5jHs3QeQ"}
+            videoLink={"https://www.youtube.com/embed/iBBf28WHu0M"}
           />
           <Topic
             title={"Abrir emulador no VSCode"}
             text={
               "Neste terceiro vídeo veremos como executar nosso projeto a partir do Visual Studio Code com nosso emulador"
             }
-            videoLink={"https://www.youtube.com/embed/IaamDZsXUbU"}
+            videoLink={"https://www.youtube.com/embed/99iKjwm36Bo"}
           />
           <Topic
             title={"Criar uma AppBar"}
             text={"Neste vídeo veremos como criar o AppBar."}
-            videoLink={"https://www.youtube.com/embed/ef5dsBRjnxM"}
+            videoLink={"https://www.youtube.com/embed/BqqqARegxwc"}
             code={`import 'package:flutter/material.dart';
 
 void main(){
@@ -64,7 +64,7 @@ class _RootPageState extends State<RootPage>{
           />
           <Topic
             title={"Adicionar um botão"}
-            videoLink={"https://www.youtube.com/embed/6JmzeYv_fwA"}
+            videoLink={"https://www.youtube.com/embed/onIAsze3O4g"}
             code={`import 'package:flutter/material.dart';
 
 void main() {
@@ -105,7 +105,7 @@ class _RootPageState extends State<RootPage> {
 
           <Topic
             title={"Criar um menu"}
-            videoLink={"https://www.youtube.com/embed/8U0lfO1BbDY"}
+            videoLink={"https://www.youtube.com/embed/N2eLnMz2B8s"}
             code={`import 'package:flutter/material.dart';
 
 void main() {
@@ -152,7 +152,7 @@ class _RootPageState extends State<RootPage> {
 
           <Topic
             title={"Criar páginas e adicionar imagens"}
-            videoLink={"https://www.youtube.com/embed/IKbPDQnzeiU"}
+            videoLink={"https://www.youtube.com/embed/b6CN7j9TNz0"}
             code={`import 'package:flutter/material.dart';
 
 void main() {
@@ -222,7 +222,7 @@ class HomePage extends StatelessWidget{
 
           <Topic
             title={"Widget - Parte 1"}
-            videoLink={"https://www.youtube.com/embed/lFl_Khbo4cc"}
+            videoLink={"https://www.youtube.com/embed/3gcNSM3NZvM"}
             code={`class LearnFlutterPage extends StatefulWidget{
   const LearnFlutterPage({Key? key}) : super(key: key);
 
@@ -266,7 +266,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           />
           <Topic
             title={"Widget - Parte 2"}
-            videoLink={"https://www.youtube.com/embed/fAHHbkZE4U8"}
+            videoLink={"https://www.youtube.com/embed/21k1t1Z0B_o"}
             code={`import 'package:flutter/material.dart';
 
 class LearnFlutterPage extends StatefulWidget {
@@ -312,7 +312,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           <Topic
             title={"Widget - Parte 3"}
             text={"test"}
-            videoLink={"https://www.youtube.com/embed/kqIoAzhuJ-w"}
+            videoLink={"https://www.youtube.com/embed/"}
             code={`import 'package:flutter/material.dart';
 
 class LearnFlutterPage extends StatefulWidget {
@@ -397,7 +397,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           />
           <Topic
             title={"Nova página através do botão de menu"}
-            videoLink={"https://www.youtube.com/embed/mmktqar1Vxc"}
+            videoLink={"https://www.youtube.com/embed/"}
             code={`import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
