@@ -61,7 +61,9 @@ export default function Topic({
 
           {author ? <p className="indent-8 text-slate-700">{author}</p> : ""}
         </div>
-        {session?.user?.email == userId ? (
+        {session?.user?.email != userId ? (
+          ""
+        ) : (
           <Link onClick={handleDel} href="/user/showMyTopic">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +80,6 @@ export default function Topic({
               />
             </svg>
           </Link>
-        ) : (
-          ""
         )}
       </div>
       <hr className="my-4" />
