@@ -311,7 +311,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           />
           <Topic
             title={"Widget - Parte 3"}
-            text={"test"}
+            text={""}
             videoLink={"https://www.youtube.com/embed/"}
             code={`import 'package:flutter/material.dart';
 

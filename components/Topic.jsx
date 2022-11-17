@@ -61,7 +61,7 @@ export default function Topic({
 
           {author ? <p className="indent-8 text-slate-700">{author}</p> : ""}
         </div>
-        {session?.user?.email != userId ? (
+        {typeof session === "undefined" || session?.user?.email != userId ? (
           ""
         ) : (
           <Link onClick={handleDel} href="/user/showMyTopic">
