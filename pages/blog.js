@@ -2,7 +2,7 @@ import { useSession } from "next-auth/react";
 import CompactTopic from "../components/CompactTopic";
 import { Button, Input } from "@web3uikit/core";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export const getServerSideProps = async () => {
   const req = await fetch(process.env.HOST + "/api/getAllTopics");
@@ -12,13 +12,30 @@ export const getServerSideProps = async () => {
 
 export default function blog({ topics }) {
   const { data: session, status } = useSession();
-  const [stateTopic, setStateTopic] = useState(topics);
-  const [searchValue, setSearchValue] = useState(topics);
+  const [searchValue, setSearchValue] = useState("");
+  let [topicTemp, setTopicTemp] = useState(topics);
 
-  const fsearch = async () => {
-    const response = await fetch("/api/searchTopics?search=" + searchValue);
-    setStateTopic(response);
-  };
+  function search(_input, _value) {
+    if (_value == null || _value == "") return _input;
+    _value = _value.toLowerCase();
+    var searched = [];
+
+    _input.forEach((e) => {
+      if (
+        e.author.toLowerCase().includes(_value) ||
+        e.title.toLowerCase().includes(_value) ||
+        e.text.toLowerCase().includes(_value)
+      )
+        searched.push(e);
+    });
+
+    return searched;
+  }
+
+  useEffect(() => {
+    setTopicTemp(search(topics, searchValue));
+    console.log("searchhh : ", searchValue);
+  }, [searchValue, topicTemp]);
 
   return (
     <div className="min-h-screen mt-2">
@@ -38,19 +55,6 @@ export default function blog({ topics }) {
                   setSearchValue(e.target.value);
                 }}
               />
-              <div className="ml-2 mt-1">
-                <Button
-                  customize={{
-                    backgroundColor: "#9EC7EA",
-                    fontSize: 12,
-                    onHover: "darken",
-                    textColor: "#FFFFFF",
-                  }}
-                  onClick={function noRefCheck() {}}
-                  text="Buscar"
-                  theme="custom"
-                />
-              </div>
             </div>
 
             <div className="flex flex-col justify-end items-center">
@@ -69,7 +73,7 @@ export default function blog({ topics }) {
             </div>
           </div>
           <hr />
-          {topics.map((topic, index) => {
+          {topicTemp.map((topic, index) => {
             const { _id, userId, author, title, text } = topic;
             return (
               <Link href={`/topic/${_id.toString()}`} key={_id.toString()}>
