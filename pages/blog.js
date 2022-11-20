@@ -34,7 +34,6 @@ export default function blog({ topics }) {
 
   useEffect(() => {
     setTopicTemp(search(topics, searchValue));
-    console.log("searchhh : ", searchValue);
   }, [searchValue]);
 
   return (
