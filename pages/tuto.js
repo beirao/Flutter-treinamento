@@ -312,7 +312,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           <Topic
             title={"Widget - Parte 3"}
             text={""}
-            videoLink={"https://www.youtube.com/embed/"}
+            videoLink={"https://www.youtube.com/embed/NjFyEs-J9aU"}
             code={`import 'package:flutter/material.dart';
 
 class LearnFlutterPage extends StatefulWidget {
@@ -397,7 +397,7 @@ class _LearnFlutterPageState extends State<LearnFlutterPage> {
           />
           <Topic
             title={"Nova página através do botão de menu"}
-            videoLink={"https://www.youtube.com/embed/"}
+            videoLink={"https://www.youtube.com/embed/sZguc7eO9e0"}
             code={`import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {

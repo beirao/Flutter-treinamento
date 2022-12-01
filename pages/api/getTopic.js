@@ -1,6 +1,5 @@
 import clientPromise from "../../lib/mongodb";
 import { ObjectId } from "mongodb";
-import { shadesOfPurple } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 export default async (req, res) => {
   try {

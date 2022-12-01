@@ -49,7 +49,6 @@ export default function blog({ topics }) {
                 label="Buscar"
                 name="Buscar"
                 width="120px"
-                onBlur={function noRefCheck() {}}
                 onChange={(e) => {
                   setSearchValue(e.target.value);
                 }}
@@ -59,7 +58,6 @@ export default function blog({ topics }) {
             <div className="flex flex-col justify-end items-center">
               <Link href="/user/addTopic">
                 <Button
-                  onClick={function noRefCheck() {}}
                   text="Add"
                   theme="primary"
                   size="large"

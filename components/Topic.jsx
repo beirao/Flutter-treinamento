@@ -20,7 +20,7 @@ export default function Topic({
   videoLink,
 }) {
   const [btnCopyFocus, setBtnCopyFocus] = useState(false);
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
   const dispatch = useNotification();
 
   function handleNewNotification(title) {
@@ -61,7 +61,9 @@ export default function Topic({
 
           {author ? <p className="indent-8 text-slate-700">{author}</p> : ""}
         </div>
-        {typeof session === "undefined" || session?.user?.email != userId ? (
+        {/* {typeof session === "undefined" || session?.user?.email != userId} */}
+
+        {status == "unauthenticated" || session?.user?.email != userId ? (
           ""
         ) : (
           <Link onClick={handleDel} href="/user/showMyTopic">
@@ -82,7 +84,7 @@ export default function Topic({
           </Link>
         )}
       </div>
-      <hr className="my-4" />
+      {title ? <hr className="my-4" /> : ""}
       {text ? text : ""}{" "}
       {link && linkName ? (
         <a
